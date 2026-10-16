@@ -1,0 +1,14 @@
+1) pubspec.yaml -> di bawah "dependencies:" (jalankan: flutter pub add flutter_screenutil font_awesome_flutter url_launcher)
+   dan di bagian "flutter:" tambahkan (indentasi 2 spasi, sejajar uses-material-design):
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+2) android/app/src/main/AndroidManifest.xml -> tambahkan sebelum <application ...>:
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
